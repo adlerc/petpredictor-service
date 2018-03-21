@@ -9,7 +9,7 @@ csv.each do |row|
   rs.dog_count = row['dog_count']
   rs.cat_count = row['cat_count']  
   rs.save
-  puts "#{t.height}, #{t.weight} saved"
+  puts "#{rs.height}, #{rs.weight} saved"
 end
 
 puts "There are now #{RawStat.count} rows in the rawstats table"
