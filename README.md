@@ -1,24 +1,49 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A RESTful api that guesses a person's pet preference (dog or cat) based on his/her height and weight.
 
-Things you may want to cover:
+1. How to setup on your local environment:
 
-* Ruby version
+* Ruby version: 2.4.1
 
-* System dependencies
+* System Configuration:
+  - add new entry to your /etc/hosts (on windows, look for c:\windows\system32\drivers\etc\hosts) 
+      127.0.0.1   api.ac-dev.com
+  - api url for local machine (note the port number is 3010): http://api.ac-dev.com:3010 
 
-* Configuration
+* Rails Configuration. Switch to the application folder and run the following terminal commands:
+  bundle install
+  bundle exec figaro install
+    - this creates config/application.yml
+    - edit config/application.yml and add new entry:
+        api_host_url: api.ac-dev.com
 
-* Database creation
+* Database creation.  Run rake commands:
+  rake db:migrate
+  rake db:test:prepare
 
-* Database initialization
+* Database initialization 
+  - seed the sqlite3 development db with a csv file
+  - run rake db:seed
 
-* How to run the test suite
+* How to run the test suite. 
+  -app is using Minitest
+  
+  bin/rake
 
-* Services (job queues, cache servers, search engines, etc.)
+* Start the service - rails s
 
-* Deployment instructions
 
-* ...
+2. How to use the service.  Below are examples using the curl command on the endpoints that makes the guess an saves the preference.  You can also use Postman (https://www.getpostman.com/) if you prefer. 
+
+* GET request to guess the pet preference based on height and weight params
+
+  curl -v -L "http://api.ac-dev.com:3010/petpredictor?height=45&weight=138"
+
+  returns a json response with the guess. if "dogorcat" value is 0 - DOG; 1 - CAT
+
+* POST to save the pet preference and increment the dog_count or cat_count for a height and weight
+
+  curl -X POST -H "Content-Type: application/json" -d '{"raw_stats":{"height":"81","weight":"290","dog_count":0,"cat_count":1}}' http://api.ac-dev.com:3010/petpredictor -v -L
+
+
