@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+valid:
+  height: 63
+  weight: 105
+  dog_count: 0
+  cat_count: 2
+
+likedogs:
+  height: 67
+  weight: 145
+  dog_count: 10
+  cat_count: 1
+
+likecats:
+  height: 50
+  weight: 100
+  dog_count: 1
+  cat_count: 15

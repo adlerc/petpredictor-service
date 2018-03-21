@@ -1,0 +1,2 @@
+class RawStatController < ActionController
+end
