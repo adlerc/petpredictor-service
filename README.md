@@ -2,7 +2,7 @@
 
 A RESTful api that guesses a person's pet preference (dog or cat) based on his/her height and weight.
 
-###1. How to setup on your local environment:
+### How to setup on your local environment:
 
   * Ruby version: 2.4.1
 
@@ -45,7 +45,8 @@ A RESTful api that guesses a person's pet preference (dog or cat) based on his/h
     rails s
     ```
 
-###2. How to use the service.  Below are examples using the curl command on the endpoints that makes the guess an saves the preference.  You can also use Postman (https://www.getpostman.com/) if you prefer. 
+### How to use the service  
+  Below are examples using the curl command on the endpoints that makes the guess an saves the preference.  You can also use Postman (https://www.getpostman.com/) if you prefer. 
 
   * GET request to guess the pet preference based on height and weight params
     ```
