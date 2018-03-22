@@ -2,7 +2,7 @@ require 'test_helper'
 
 class PetPredictorApiTest < ActionDispatch::IntegrationTest
 
-  setup { host! ENV["api_host_url"] }
+  setup { host! 'api.ac-dev.com' }
 
   test 'return a guess' do
     get '/petpredictor?height=68&weight=171'
