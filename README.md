@@ -11,16 +11,7 @@ A RESTful api that guesses a person's pet preference (dog or cat) based on his/h
       ```
       127.0.0.1   api.ac-dev.com
       ```
-    - api url for local machine (note the port number is 3010): http://api.ac-dev.com:3010 
-
-  * Rails Configuration. Switch to the application folder and run the following terminal commands:
-    - `bundle install`
-    - `bundle exec figaro install`
-      - this creates config/application.yml
-      - edit config/application.yml and add new entry:
-        ```
-        api_host_url: api.ac-dev.com
-        ```
+    - api url for local machine (note the port number is 3010): http://api.ac-dev.com:3010
 
   * Database creation.  Run rake commands:
     ```
@@ -37,7 +28,7 @@ A RESTful api that guesses a person's pet preference (dog or cat) based on his/h
   * How to run the test suite. 
     - app is using Minitest
     ```
-    run bin/rake
+    run rake
     ```
 
   * Start the service
