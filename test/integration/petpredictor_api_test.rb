@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class GuessPetPredictorTest < ActionDispatch::IntegrationTest
+class PetPredictorApiTest < ActionDispatch::IntegrationTest
 
   setup { host! ENV["api_host_url"] }
 
