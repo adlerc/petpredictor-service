@@ -50,5 +50,3 @@ A RESTful api that guesses a person's pet preference (dog or cat) based on his/h
     ```
     curl -X POST -H "Content-Type: application/json" -d '{"raw_stats":{"height":"81","weight":"290","dog_count":0,"cat_count":1}}' http://api.ac-dev.com:3010/petpredictor -v -L
     ```
-
-
